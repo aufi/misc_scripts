@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# kdyz tam neni
+echo "alias='apt-get update && apt-get upgrade'" >> ~/.bashrc

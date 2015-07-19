@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+# iptables shortcut
+
+if [ -z $1 ];
+  echo "Enter IP to block"
+  exit 1
+fi
+
+echo "Blocking IP $1"
+
+/sbin/iptables -I INPUT -s $1 -j DROP

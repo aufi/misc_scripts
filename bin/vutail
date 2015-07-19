@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+# webhosting with imscp tailf for user web log
+#
+# $1 = UID, e.g. 2096
+
+#ls -l /var/www/virtual | grep $1
+
+#tailf /var/log/apache2/
