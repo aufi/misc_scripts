@@ -2,8 +2,12 @@
 #
 # webhosting with imscp tailf for user web log
 #
-# $1 = UID, e.g. 2096
+# $1 = UID, e.g. 2001
 
-#ls -l /var/www/virtual | grep $1
+domain=`ls -la /var/www/virtual | grep $1 | tail -1 | awk '{print $NF}'` 
 
-#tailf /var/log/apache2/
+echo "=============" $domain "===========" 
+
+ls -lha /var/www/virtual/$domain | grep -e '^d' 
+
+tailf /var/log/apache2/$domain-combined.log
