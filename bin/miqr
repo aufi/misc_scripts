@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -ex
+
+if [ -z $1 ]; then
+  echo "missing PR ID"
+  exit 11
+fi
+
+if [ -z $2 ]; then
+  echo "missing branch name"
+  exit 12
+fi
+
+git fetch upstream pull/$1/head:$2
+
+git checkout $2
+
